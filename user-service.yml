@@ -24,4 +24,4 @@ eureka:
 
 server:
   servlet:
-    context-path: /Pdaece123
+    context-path: /
