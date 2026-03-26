@@ -1,13 +1,20 @@
-server:
-  port: 9002
-
 spring:
+  application:
+    name: contact-service
   datasource:
-    url: jdbc:mysql://localhost:3306/contact_service_db
-    username: root
-    password: Pdaece123
-
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    preferIpAddress: true
+
+server:
+  servlet:
+    context-path: /
