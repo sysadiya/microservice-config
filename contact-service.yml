@@ -1,0 +1,13 @@
+server:
+  port: 9002
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/contact_service_db
+    username: root
+    password: Pdaece123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
